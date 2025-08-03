@@ -3,7 +3,6 @@
         "version": "1.0.0",
         "description": "a Plugin for game",
         "API": "3c4f8b2d-5e3a-4b1c-9f0d-8e2f6b7c8d9e",
-
         "MSG": {
             "file-name": "default.lua",
             "file-type": "lua",
@@ -11,9 +10,9 @@
             "status": {
                 "join-code-server": "True"
             }
-        },
-        "inclode": {
-            "msg-message": "cache/msg.int"
         }
+    },
+    "include": {
+        "msg": "cache/msg.int"
     }
 }

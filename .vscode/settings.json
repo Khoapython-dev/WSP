@@ -1,0 +1,12 @@
+{
+    "Lua.diagnostics.disable": [
+        "need-check-nil"
+    ],
+    "Lua.diagnostics.globals": [
+        "pl_text",
+        "base_dir"
+    ],
+    "python.analysis.extraPaths": [
+        "./admin"
+    ]
+}

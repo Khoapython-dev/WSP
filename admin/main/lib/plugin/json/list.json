@@ -1,0 +1,8 @@
+{
+    "list": {
+        "default": {
+            "lua": "main/plugin/lua/plua.lua",
+            "py": "main/plugin/python/hello.plugin.py"
+        }
+    }
+}

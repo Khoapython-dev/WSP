@@ -3,8 +3,8 @@ import os, json
 def get_total_plugin():
     base_dir = os.path.dirname(os.path.abspath(__file__))  # /Applications/WSP/admin
 
-    json_path = os.path.join(base_dir, "main/lib/api/report.json")
-    json_front = os.path.join(base_dir, "main/plugin/lua/default/json/api.json")
+    json_path = os.path.join(base_dir, "main/lib/api/status.json")
+    json_front = os.path.join(base_dir, "main/plugin/status.json")
 
     os.makedirs(os.path.dirname(json_front), exist_ok=True)
 
@@ -22,7 +22,30 @@ def get_total_message():
 
     msg = os.path.join(base_dir, "main/plugin/lua/default/cache/msg.int")
     msg_front = os.path.join(base_dir, "main/data/storage/message.sms")
+    
+
+    with open(msg, 'r') as file:
+        data = file.read()
+    
+    ens = data
 
 
+    with open(msg_front, 'w') as file:
+        file.write(ens)
 
-get_total_plugin()
+def get_total_sms():
+    base_dir = os.path.dirname(os.path.abspath(__file__))  # /Applications/WSP/admin
+
+    smt = os.path.join(base_dir, "main/data/storage/message.sms")
+    sms = os.path.join(base_dir, "main/lib/plugin/storage/message.sms")
+
+    with open(smt, 'r') as file:
+        data = file.read()  
+
+    with open(sms, 'w') as file:
+        file.write(data)
+
+get_total_message()
+get_total_sms()
+
+
